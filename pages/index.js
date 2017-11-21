@@ -11,7 +11,22 @@ class Index extends Component {
         super();
     }
     render() {
-        return (<App />);
+        return (<div>
+            <App />
+            dfg
+            <span>scss styled-jsx</span>
+            <style>
+                {`
+                    div {
+                        color: red;
+
+                        span {
+                            color: blue;
+                        }
+                    }
+                `}
+            </style>
+        </div>);
     }
 }
 
