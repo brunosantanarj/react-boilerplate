@@ -1,11 +1,18 @@
-import Head from 'next/head'
+import 'isomorphic-fetch';
+import React, { Component } from 'react';
+// import Head from 'next/head'
 import App from '../src/App';
+import withRedux from 'next-redux-wrapper';
+import initStore from '../container/store';
 
-export default () => <div>
-    <Head>
-        <title>My page title</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <p>Hello world!</p>
-    <App />
-</div>
+
+class Index extends Component {
+    constructor() {
+        super();
+    }
+    render() {
+        return (<App />);
+    }
+}
+
+export default withRedux(initStore)(Index);
