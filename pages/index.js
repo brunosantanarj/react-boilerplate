@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import React, { Component } from 'react';
+import Link from 'next/link';
 // import Head from 'next/head'
 import App from '../src/App';
 import withRedux from 'next-redux-wrapper';
@@ -12,12 +13,13 @@ class Index extends Component {
         super();
     }
     render() {
-        return (<div>
-            <App />
-            dfg
-            <span>scss styled-jsx</span>
-            <style>{style}</style>
-        </div>);
+        return (
+            <div>
+                <App key={Math.random()} />
+                <style>{style}</style>
+                <Link href="/login" prefetch><a>Login</a></Link>
+            </div>
+        );
     }
 }
 
