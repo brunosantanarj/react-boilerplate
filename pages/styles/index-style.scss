@@ -1,0 +1,13 @@
+@import 'node_modules/jeet/scss/index';
+
+$v: blue;
+$c: green;
+
+div {
+    color: $v;
+    @include center(1200px);
+
+    span {
+        color: $c;
+    }
+}

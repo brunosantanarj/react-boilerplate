@@ -7,8 +7,8 @@ class App extends Component {
 
     render() {
         return [
-            <div>React 16</div>,
-            <p>Working...</p>
+            <div key={1}>React 16</div>,
+            <p key={2}>Working...</p>
         ];
     }
 }

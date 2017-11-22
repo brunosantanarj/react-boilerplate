@@ -15,8 +15,19 @@
   },
   "plugins": [
     [
-      "styled-jsx/babel",
-      { "plugins": ["styled-jsx-plugin-sass"] }
+      "module-resolver", {
+        "root": ["."],
+        "alias": {
+          "styles": "./styles"
+        },
+        "cwd": "babelrc"
+    }],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "scss$"]
+      }
     ]
-  ]
+  ],
+  "ignore": []
 }
