@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class App extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
-        return [
-            <div key={1}>React 16</div>,
-            <p key={2}>Working...</p>
-        ];
+        
+        const Title = styled.h1`
+            color: red;
+            font-size: 60px;
+        `;
+
+        return (
+            <React.Fragment>
+                <Title>React boileplate</Title>
+                <div>React 16</div>,
+                <p>Working...</p>
+            </React.Fragment>
+        );
     }
 }
 
