@@ -1,19 +1,14 @@
 import 'isomorphic-fetch';
-import React, { Component } from 'react';
-import Link from 'next/link';
-import App from '../src/App';
+import React from 'react';
+
 import withRedux from 'next-redux-wrapper';
 import initStore from '../container/store';
+import GlobalLayout from '../layout/GlobalLayout';
 
-class Index extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <App />
-                <Link href="/login" prefetch><a>Login</a></Link>
-            </React.Fragment>
-        );
-    }
-}
+const Index = () => (
+	<GlobalLayout>
+		dfsaasdf
+	</GlobalLayout>
+);
 
 export default withRedux(initStore)(Index);

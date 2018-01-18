@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
-import todos from './todos';
+import firstRenderReducer from './FirstRenderReducer';
 
-export default combineReducers({ todos });
+export default combineReducers({
+	firstRenderReducer,
+});

@@ -30,7 +30,18 @@ module.exports = {
           }
         ]
       }
-    )
+	)
+	if (dev) {
+		config.module.rules.push({
+			test: /\.js$/,
+			exclude: /node_modules/,
+			enforce: 'pre',
+			loader: 'eslint-loader',
+			options: {
+			  // eslint options (if necessary)
+			}
+		})
+	}
     return config
   }
 }
