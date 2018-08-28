@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -6,14 +6,10 @@ const Title = styled.h1`
     font-size: 60px;
 `;
 
-class App extends PureComponent {
-    render = () => (
-        <React.Fragment>
-            <Title>React boileplate</Title>
-            <div>React 16</div>,
-            <p>Working...</p>
-        </React.Fragment>
-    )
-}
+const App = () => (
+	<React.Fragment>
+		<Title>React boileplate</Title>
+	</React.Fragment>
+);
 
 export default App;

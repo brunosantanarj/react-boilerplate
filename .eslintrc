@@ -6,6 +6,12 @@
 	"extends": [
 		"airbnb"
 	],
+	"globals": {
+		"document": true,
+		"window": true,
+		"process": true,
+		"commonjs": true
+	},
 	"env": {
 		"browser": true,
 		"node": true,

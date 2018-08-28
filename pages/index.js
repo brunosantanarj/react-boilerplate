@@ -7,7 +7,7 @@ import GlobalLayout from '../layout/GlobalLayout';
 
 const Index = () => (
 	<GlobalLayout>
-		dfsaasdf
+		Página inicial /pages/index.js
 	</GlobalLayout>
 );
 
