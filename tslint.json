@@ -1,0 +1,22 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint-react-recommended"],
+    "jsRules": {
+    },
+    "rules": {
+        "indent": [true, "spaces", 2],
+        "quotemark": [true, "single", "jsx-single"],
+        "no-submodule-imports": false,
+        "space-before-function-paren": false
+    },
+    "linterOptions": {
+        "exclude": [
+            "./coverage",
+            "./postcss.config.js",
+            "./jest.config.js",
+            "./jest.setup.js",
+            "./next.config.js"
+        ]
+    },
+    "rulesDirectory": []
+}

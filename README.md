@@ -4,10 +4,11 @@ Esse boilerplate foi criado com objetivo de otimizar tempo inicial de um projeto
 
 O que está configurado nesse projeto além do React ?
 
+* TypeScript 
 * Styled-Components
 * Redux (Já com Redux DevTools e Thunk)
 * Next.js para SSR :)
-* Eslint com padrão airbnb
+* TSLInt
 * Jest e Enzyme
 * Code Splitting automático
 
