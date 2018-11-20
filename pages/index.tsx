@@ -7,9 +7,9 @@ import GlobalLayout from '../layout/GlobalLayout';
 
 import App from '../src/App';
 
-const Index = (props) => (
+const Index = () => (
   <GlobalLayout>
-    <App number={2} {...props} />
+    <App number={2} />
   </GlobalLayout>
 );
 

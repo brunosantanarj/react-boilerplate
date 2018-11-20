@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import firstRenderReducer from './FirstRenderReducer';
+import indexReducer from '../index';
 
 export default combineReducers({
-  firstRenderReducer
+  indexReducer
 });

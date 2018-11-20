@@ -1,29 +1,45 @@
 import * as React from 'react';
 import withRedux from 'next-redux-wrapper';
-import { bindActionCreators } from 'redux';
 
-import VerifyViewPortAction from '../store/actions/FirstRenderAction';
 import initStore from '../store/store';
+import { indexOperations, indexSelectors } from '../store/index';
 import Head from '../components/Head/Head';
 
 export interface Props {
   children: any;
+  name: string;
+  update: (update: Object) => null;
 }
 
 class GlobalLayout extends React.Component<Props> {
-  render = () => (
-    <React.Fragment>
-      <Head />
-      <header>HEADER</header>
-      <main>{React.cloneElement(this.props.children, { store: this.props })}</main>
-      <footer>FOOTER</footer>
-    </React.Fragment>
-  )
+
+  handleInput = ({ target }) => this.props.update({ name: target.value });
+
+  render = () => {
+    const { children, ...props } = this.props;
+
+    return (
+      <React.Fragment>
+        <Head />
+        <header>HEADER</header>
+        <main>{React.cloneElement(children, { ...props })}</main>
+        <input
+          onChange={this.handleInput}
+          value={this.props.name || ''}
+        />
+        <p>{this.props.name || 'não tem'}</p>
+        <footer>FOOTER</footer>
+      </React.Fragment>
+    );
+  }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ VerifyViewPortAction }, dispatch);
+const mapDispatchToProps = {
+  update: indexOperations.update
+};
+
 const mapStateToProps = (state) => ({
-  teste: state.firstRenderReducer
+  name: indexSelectors.getName(state)
 });
 
 export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(GlobalLayout);
